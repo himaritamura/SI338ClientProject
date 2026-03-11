@@ -1,32 +1,26 @@
 /* Base layout */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  font-family: 'Times New Roman', sans-serif;
+  font-family: Trebuchet MS;
   margin: 0;
+  max-width: 100vw;
   line-height: 1.6;
   color:purple;
   background-color:aliceblue;
+  box-sizing: border-box;
 }
 
 header, main, footer {
   padding: 1rem;
 }
 
-img {
-  width:40px;
-}
-
-h1 {
-  font-size:60px;
-}
-
-main {
-  max-width: 900px;
-  margin: 0 auto;
-
-}
-
 header{
   background-color:beige;
+  position: sticky;
+  top: 0;
 }
 
 footer{
@@ -34,51 +28,76 @@ footer{
 }
 
 header p {
-  margin-top: 0.25rem;
-  opacity: 0.8;
-  font-size:20px;
+  font-size:15px;
+}
+
+.skip {
+  position: fixed;
+  background-color: #333;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+
+.skip:hover {
+  background-color: #555;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+h1 {
+  margin: 15px;
+  font-size:25px;
+}
+
+img {
+  display: block;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border: 2px solid purple;
+
+  animation-duration: 3s;
+  animation-name: slide-in;  
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+
+  to {
+    translate: 0 0;
+    opacity: 1;
+  }
 }
 
 /* Tables */
+#table-wrapper {
+  max-width: 100%; 
+  overflow-x: auto;
+  display: block;
+  border: 1px solid #ddd;
+}
+
 table {
   width: 100%;
   border-collapse: collapse;
 }
 
+
 th, td {
   padding: 0.5rem;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid grey;
   text-align: left;
 }
 
-/* Cards */
-article {
-  border: 1px solid #ccc;
-  border-radius: 12px;
-  padding: 1rem;
-  margin-bottom: 1rem;
-}
-
-/* Definition lists */
-dl {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 0.25rem 1rem;
-}
-
-dt {
-  font-weight: bold;
-}
-
-dd {
-  margin: 0;
-}
-
-/* Timeline */
-ol {
-  padding-left: 1.25rem;
-}
-
-li {
-  margin-bottom: 1.5rem;
+td:nth-child(2n + 1) {
+  background-color: lightgoldenrodyellow;
 }
