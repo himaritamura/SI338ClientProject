@@ -1,6 +1,7 @@
 /* Base layout */
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 225px;
 }
 
 body {
@@ -31,16 +32,31 @@ header p {
   font-size:15px;
 }
 
+label[for="show_best"] {
+  color: blue;
+}
+
+label[for="show_recent"] {
+  color: orange;
+}
+
 .skip {
-  position: fixed;
-  background-color: #333;
-  color: white;
+  position: absolute;
+  top: 0;
+  z-index: 999;
+  
+  transform: translateY(-100%);
+  transition: transform 0.3s ease-in-out;
+
+  background-color: #d4d4d4;
+  color: rgb(0, 0, 0);
   padding: 10px 15px;
   border-radius: 5px;
 }
 
-.skip:hover {
-  background-color: #555;
+.skip:focus {
+  transform: translateY(0);
+  text-decoration: underline;
 }
 
 .profile {
@@ -50,7 +66,6 @@ header p {
 }
 
 h1 {
-  margin: 15px;
   font-size:25px;
 }
 

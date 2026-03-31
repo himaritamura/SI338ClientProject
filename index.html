@@ -11,6 +11,8 @@
 </head>
 
 <body>
+  <a href="#results"><button class="skip">Skip to Results</button></a>
+
   <header>
     <div class="profile">
       <h1>Garrett Comer</h1>
@@ -21,8 +23,6 @@
       <a href="https://www.athletic.net/athlete/21615274/cross-country/">Athlete page</a>
     </p>
   </header>
-
-  <a href="#results"><button id="skip">Skip to Results</button></a>
 
   <main>
     <section>
@@ -36,6 +36,13 @@
 
     <section>
       <h2 id="results">All Results</h2>
+      
+      <input type="checkbox" id="show_best"></input>
+      <label for="show_best">Highlight Best Time</label>
+
+      <input type="checkbox" id="show_recent"></input>
+      <label for="show_recent">Highlight Recent</label>
+
       <div id="table-wrapper">
         <table>
           <thead>
@@ -49,14 +56,14 @@
             </tr>
           </thead>
           <tbody>
-            <tr><td>Aug 15 2025</td><td>Lamplighter Invitational</td><td>17:22.3</td><td>35</td><td>11</td><td><a href="https://www.athletic.net/CrossCountry/meet/247194/results/1007644">Results</a><br><span>Race ID: 1007644</span></td></tr>
+            <tr id="best_time"><td>Aug 15 2025</td><td>Lamplighter Invitational</td><td>17:22.3</td><td>35</td><td>11</td><td><a href="https://www.athletic.net/CrossCountry/meet/247194/results/1007644">Results</a><br><span>Race ID: 1007644</span></td></tr>
             <tr><td>Aug 27 2025</td><td>2nd Ann Arbor City Preview presented by AARC</td><td>17:40.1</td><td>9</td><td>11</td><td><a href="https://www.athletic.net/CrossCountry/meet/253860/results/1013715">Results</a></td></tr>
             <tr><td>N/A</td><td>N/A</td><td>N/A</td><td>N/A</td><td>N/A</td><td>N/A</td></tr>
             <tr><td>N/A</td><td>N/A</td><td>N/A</td><td>N/A</td><td>N/A</td><td>N/A</td></tr>
             <tr><td>N/A</td><td>N/A</td><td>N/A</td><td>N/A</td><td>N/A</td><td>N/A</td></tr>
             <tr><td>N/A</td><td>N/A</td><td>N/A</td><td>N/A</td><td>N/A</td><td>N/A</td></tr>
             <tr><td>Aug 29 2024</td><td>37th Early Bird Open (HS Open 5K)</td><td>21:04.2</td><td>160</td><td>10</td><td><a href="https://www.athletic.net/CrossCountry/meet/235827/results/943367">Results</a><br><span>Race ID: 943367</span></td></tr>
-            <tr><td>Oct 5 2025</td><td>2024 Portage Invitational</td><td>21:04.9</td><td>318</td><td>19</td><td><a href="https://www.athletic.net/CrossCountry/meet/237295/results/948796">Results</a></td></tr>
+            <tr id="recent"><td>Oct 5 2025</td><td>2024 Portage Invitational</td><td>21:04.9</td><td>318</td><td>19</td><td><a href="https://www.athletic.net/CrossCountry/meet/237295/results/948796">Results</a></td></tr>
             <tr><td>N/A</td><td>N/A</td><td>N/A</td><td>N/A</td><td>N/A</td><td>N/A</td></tr>
             <tr><td>N/A</td><td>N/A</td><td>N/A</td><td>N/A</td><td>N/A</td><td>N/A</td></tr>
             <tr><td>N/A</td><td>N/A</td><td>N/A</td><td>N/A</td><td>N/A</td><td>N/A</td></tr>
@@ -79,5 +86,7 @@
   <footer>
     <p>Generated from Garrett’s race spreadsheet.</p>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
