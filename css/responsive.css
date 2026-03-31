@@ -13,7 +13,7 @@
 
 @media(prefers-color-scheme: dark) {
     header, footer {
-        background-color: rgb(84, 10, 84);
+        background-color: rgb(58, 7, 58);
     }
     body {
         color: white;
@@ -29,10 +29,12 @@
     }
 
     label[for="show_best"] {
-        color: rgb(101, 243, 155);
+        color: rgb(109, 118, 255);
     }
 
     label[for="show_recent"] {
-        color: orange;
+        color: rgb(213, 139, 0);
     }
+
+    /* TODO: fix dark mode highlighting */
 }

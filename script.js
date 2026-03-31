@@ -25,7 +25,7 @@ function showBest() {
 function showRecent() {
     if (!recent_shown) { 
         // button pressed
-        document.getElementById("recent").style.border = "orange 5px solid";
+        document.getElementById("recent").style.border = "rgb(162, 82, 16) 5px solid";
 
 
         // jump to content

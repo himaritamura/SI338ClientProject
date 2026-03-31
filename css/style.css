@@ -33,11 +33,11 @@ header p {
 }
 
 label[for="show_best"] {
-  color: blue;
+  color: rgb(0, 0, 255);
 }
 
 label[for="show_recent"] {
-  color: orange;
+  color: rgb(162, 82, 16);
 }
 
 .skip {
