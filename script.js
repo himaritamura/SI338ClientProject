@@ -1,9 +1,6 @@
 const show_best = document.getElementById("show_best");
 const show_recent = document.getElementById("show_recent");
 
-// const best_button = document.querySelector('label[for="show_best"]');
-// const recent_button = document.querySelector('label[for="show_recent"]');
-
 let best_shown = false;
 let recent_shown = false;
 
